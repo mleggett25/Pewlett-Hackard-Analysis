@@ -93,3 +93,28 @@ Note: This table only shows the first 10 rows. The full table is 1,940 rows.
 - 
 
 ## Pewlett Hackard Analysis Summary
+
+90,398 roles will need to be filled as the employees begin to hit retirement age. However, we can provide additional queries to understand the impact of this more deeply. By finding the total number of employees at Pewlett Hackard, we can see the impact on the company by a percentage of how many jobs will remain filled and how many need to be filled.
+
+We can create a query which creates a table holding all the employees at the company while also removing duplicate values by using the DISTINCT ON function and ordering the table so that it shows an employee's most recent job title. We can then write a simple query to count the number of employee IDs to get the number of total employees.
+
+```
+SELECT DISTINCT ON (employees.emp_no) employees.emp_no,
+    employees.first_name,
+    employees.last_name,
+    titles.title,
+    titles.from_date,
+    titles.to_date
+INTO all_employees
+FROM employees
+LEFT JOIN titles
+ON employees.emp_no = titles.emp_no
+ORDER BY employees.emp_no, titles.to_date DESC
+
+SELECT COUNT (emp_no)
+FROM all_employees
+```
+
+The query results show that there are 300,024 total employees. With this new information, we can now see that almost a third of Pewlett Hackard employees are going to be retiring, with a percentage of 30.1%.
+
+
