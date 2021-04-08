@@ -58,3 +58,34 @@ The query results produce the following table:
 ![Retiring Titles](./Resources/retiring_titles_table.PNG)
 
 ### Employees Eligible for Mentorship Program
+
+To identify the employees who are eligible to participate in a mentorship program, I created a Mentorship Eligibilty table that holds the employees who were born between January 1, 1965 and December 31, 1965.
+
+```
+SELECT DISTINCT ON (employees.emp_no) employees.emp_no,
+	employees.first_name,
+	employees.last_name,
+	employees.birth_date,
+	dept_emp.from_date,
+	dept_emp.to_date,
+	titles.title
+INTO mentorship_eligibility
+FROM employees
+LEFT JOIN dept_emp
+ON employees.emp_no = dept_emp.emp_no
+LEFT JOIN titles
+ON titles.emp_no = employees.emp_no
+WHERE employees.birth_date BETWEEN '1965-01-01' AND '1965-12-31'
+ORDER BY employees.emp_no
+SELECT * FROM mentorship_eligibility
+```
+
+The query results produce the following table:
+
+![Mentorship Eligibility](./Resources/mentorship_eligibility_table.PNG)
+
+Note: This table only shows the first 10 rows. The full table is 1940 rows.
+
+### Summary of Results
+
+
