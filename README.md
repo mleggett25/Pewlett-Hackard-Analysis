@@ -90,7 +90,7 @@ Note: This table only shows the first 10 rows. The full table is 1,940 rows.
 - A total of 90,398 employees are of retirement-age.
 - Half of the retirees have "Engineer" in their title, making up 50.2% of the retiring population. Retirees with "Staff" in their title make up another 44.8%. The remaining 5% includes Technique Leaders and Managers.
 - A total of 1,940 employees are eligible to be mentors in the mentorship program.
-- 
+- There are roughly 2 mentors for every 90 vacancies.
 
 ## Pewlett Hackard Analysis Summary
 
@@ -117,4 +117,5 @@ FROM all_employees
 
 The query results show that there are 300,024 total employees. With this new information, we can now see that almost a third of Pewlett Hackard employees are going to be retiring, with a percentage of 30.1%.
 
+In terms of whether there are enough employees to mentor the next generation of employees, there is approximately 2 mentors for every 90 new employees coming into Pewlett Hackard. There are not enough mentors to effectively train the next generationa and I would recommend expanding the eligibilty date for mentors in order to increase the amount of mentors.
 
