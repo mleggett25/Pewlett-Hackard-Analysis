@@ -8,6 +8,9 @@ The purpose of this analysis was to:
 2. identify employees who are eligible to participate in a mentorship program.
 
 ## Results
+
+### Retiring Employees by Title
+
 To determine the number of retiring employees per title, I first created a Retirement Titles table that holds the titles of employees born between January 1, 1952 and December 31, 1955.
 
 ```
@@ -51,3 +54,7 @@ SELECT * FROM retiring_titles
 ```
 
 The query results produce the following table:
+
+![Retiring Titles](./Resources/retiring_titles_table.PNG)
+
+### Employees Eligible for Mentorship Program
