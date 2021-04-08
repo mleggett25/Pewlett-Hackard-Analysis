@@ -12,9 +12,9 @@ To determine the number of retiring employees per title, I first created a Retir
 
 ```
 SELECT employees.emp_no,
-	employees.first_name,
+    employees.first_name,
     employees.last_name,
-	titles.title,
+    titles.title,
     titles.from_date,
     titles.to_date
 INTO retirement_titles
@@ -30,9 +30,9 @@ I then removed duplicate rows using the DISTINCT ON statement and returned only 
 
 ```
 SELECT DISTINCT ON (retirement_titles.emp_no) retirement_titles.emp_no,
-	retirement_titles.first_name,
+    retirement_titles.first_name,
     retirement_titles.last_name,
-	retirement_titles.title
+    retirement_titles.title
 INTO unique_titles
 FROM retirement_titles
 ORDER BY retirement_titles.emp_no, retirement_titles.to_date DESC;
