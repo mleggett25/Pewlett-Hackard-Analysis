@@ -117,5 +117,5 @@ FROM all_employees
 
 The query results show that there are 300,024 total employees. With this new information, we can now see that almost a third of Pewlett Hackard employees are going to be retiring, with a percentage of 30.1%.
 
-In terms of whether there are enough employees to mentor the next generation of employees, there is approximately 2 mentors for every 90 new employees coming into Pewlett Hackard. There are not enough mentors to effectively train the next generationa and I would recommend expanding the eligibilty date for mentors in order to increase the amount of mentors.
+In terms of whether there are enough employees to mentor the next generation of employees, there is approximately 2 mentors for every 90 new employees coming into Pewlett Hackard. There are not enough mentors to effectively train the next generation and I would recommend expanding the eligibilty date for mentors in order to increase the amount of mentors.
 
